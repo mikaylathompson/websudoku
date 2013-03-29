@@ -1,0 +1,116 @@
+@font-face {
+  font-family: 'Bariol';
+  font-style: normal;
+  src: local("Bariol_Regular"), url(Bariol_Regular.otf) format("opentype"); 
+}
+
+@font-face {
+  font-family: 'Cuprum';
+  font-style: normal;
+  src: local("Cuprum-Regular"), url(Cuprum-Regular.ttf) format("truetype"); 
+}
+
+@font-face {
+  font-family: 'Cuprum';
+  font-style: bold;
+  src: local("Cuprum-Bold"), url(Cuprum-Bold.ttf) format("truetype"); 
+}
+
+body {
+	background-color: #333333;
+}
+
+table.page {
+	background-color: #333333;
+	margin-left: auto;
+	margin-right: auto;
+	width: 1100px;
+	margin-top: 80px;
+}
+
+table.title {
+	border: none;
+	color: #CCCCCC;
+	float: right;
+	font-family: Cuprum;
+	padding: 0px;
+	width: 30px;
+
+}
+
+.footer {
+	background-color: #333333;
+	color: #CCCCCC;
+	font-family: Bariol;
+	font-size: 1.25em;
+	text-align: center;
+	margin-top: 70px;
+}
+
+.title td {
+	background-color: #333333;
+}
+
+td.S {
+	
+	font-size: 10em;
+	font-weight: bold;
+	line-height: 120%;
+	text-align: right;
+	width: 80px;
+}
+
+td.titleText {
+	font-size: 5em;
+	font-style: normal;
+	letter-spacing: -1px;
+	line-height: 85%;
+	padding: 0px;
+	text-align: left;
+	padding-top: 18px;
+	vertical-align: top;
+}
+
+td.again {
+	font-family: Bariol;
+	font-size: 2em;
+	text-align: center;
+	vertical-align: middle;
+	width: 275px;
+}
+
+a {
+	color: #CCCCCC;
+	text-decoration: none;
+}
+
+
+table.sudoku {
+	background-color: #0099CC;
+	border: 2px solid black;
+	border-radius: 8px;
+	
+	color: #333333;
+	font-family: Bariol, sanserif;
+	font-size: 2.25em;
+	line-height: 80%;
+	margin-left: 25px;
+	padding: 8px;
+	text-align: center;
+	width: 500px;
+}
+
+.sudoku td {
+	background-color: #FFFFFF;
+	padding: 8px;
+	border: 3px solid #333333;
+	border-radius: 4px;
+}
+
+td.midrow {
+	background-color: #CCCCCC;
+}
+
+td.midcol {
+	background-color: #CCCCCC;
+}
