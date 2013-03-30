@@ -93,7 +93,7 @@ public class WebSudokuSolverServlet extends HttpServlet {
 	}
 	
 	public static int[][] runBoard(int[][] sudoku) {
-		sudoku = runBoxes(runColumns(runRows(sudoku)));
+		sudoku = runCells(runBoxes(runColumns(runRows(sudoku))));
 		return sudoku;
 	}
 	
@@ -186,6 +186,34 @@ public class WebSudokuSolverServlet extends HttpServlet {
 		}
 		return sudoku;
 	}
+	
+	public static int[][] runCells(int[][] sudoku) {
+		for (int row = 0; row < 9; row++) {
+			for (int col = 0; col < 9; col++) {
+				boolean[] cellArray = new boolean[9];
+				for (int n = 1; n <= 9; n++) {
+					if (sudoku[row][col] == 0) {
+						if (isPossible(sudoku, row, col, n)) {
+							cellArray[n-1] = true;
+						}
+					}
+				}
+				int count = 0;
+				int index = 0;
+				for (int i = 0; i < 9; i++) {
+					if (cellArray[i]) {
+						count++;
+						index = i;
+					}
+				}
+				if (count == 1) {
+					sudoku[row][col] = index + 1;
+				}
+			}
+		}
+		return sudoku;
+	}
+	
 	public static int countZeroes(int[][] sudoku) {
 		int count = 0;
 		for (int row = 0; row < 9; row++) {
