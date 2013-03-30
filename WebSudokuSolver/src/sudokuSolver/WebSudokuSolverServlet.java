@@ -15,7 +15,7 @@ public class WebSudokuSolverServlet extends HttpServlet {
 		
 		resp.setContentType("text/html");
 		String head = "<!DOCTYPE html>\n<html>\n<head>\n<link type=\"text/css\" rel=\"stylesheet\" href=\"style.css\" />\n</head>\n<body>\n";
-		String foot = "</td>\n<td class=\"again\"><a href=\"index.html\">Solve<br>Another<br>Sudoku</a></td>\n</tr>\n</table>\n<div class=\"footer\">Mikayla Thompson | CS112 | Yale University</div>\n</body>\n</html>";
+		String foot = "</td>\n<td class=\"again\"><a href=\"index.html\">Solve<br>Another</a></td>\n</tr>\n</table>\n<div class=\"footer\">Mikayla Thompson</div>\n</body>\n</html>";
 		String title = "<table class=page>\n<tr>\n<td>\n<table class=\"title\">\n<tr>\n<td class=\"S\">S</td>\n<td class=\"titleText\">udoku<br>olver</td>\n</tr>\n</table>\n</td>\n<td>";
 		
 		resp.getWriter().println(head);
@@ -30,9 +30,17 @@ public class WebSudokuSolverServlet extends HttpServlet {
 	
 	public static int[][] makeArray(HttpServletRequest req) {
 		String nums = "";
-//		for (int i = 0; i < 81; i++) {
-//			nums += req.getParameter("n" + i);
-//		}
+		if (req.getParameter("numbers").length() == 81) {
+			nums = req.getParameter("numbers");
+		} else {
+			for (int i = 0; i < 81; i++) {
+				if (req.getParameter("n" + i).equals("")) {
+					nums += "0";
+				} else {
+					nums += req.getParameter("n" + i).charAt(0);
+				}
+			}
+		}
 		nums += req.getParameter("numbers");
 		int[][] sudoku = new int[9][9];
 		for (int row = 0; row < 9; row ++) {
@@ -70,7 +78,11 @@ public class WebSudokuSolverServlet extends HttpServlet {
 				if (col == 3 || col == 4 || col == 5) {
 					filled += " \"midcol\"";
 				}
-				filled += ">" + puzzle[row][col] + " </td> ";
+				if (puzzle[row][col]==0) {
+					filled += "> </td> ";
+				} else {
+					filled += ">" + puzzle[row][col] + " </td> ";
+				}
 				if (col == 8) {
 					filled += "\n</tr> ";
 				}

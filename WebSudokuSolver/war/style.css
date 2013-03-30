@@ -42,9 +42,18 @@ table.title {
 	background-color: #333333;
 	color: #CCCCCC;
 	font-family: Bariol;
-	font-size: 1.25em;
-	text-align: center;
-	margin-top: 70px;
+	font-size: 1em;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: right;
+	width: 500px;
+}
+
+
+.test {
+	font-size: .5em;
+	color: #00ACE6;
+	visibility: hidden;
 }
 
 .title td {
@@ -79,11 +88,50 @@ td.again {
 	width: 275px;
 }
 
+.instr {
+	color: #00ACE6;
+}
+
 a {
 	color: #CCCCCC;
 	text-decoration: none;
 }
+input {
+	background-color: #FFFFFF;
+	color: #006080;
+	font-size: .8em;
+	font-family: Bariol, sanserif;
+	padding: 0px;
+	text-align: center;
+	border: none;
+}
 
+input.solve {
+	background-color: #333333;
+	border: none;
+	color: #CCCCCC;
+	font-size: 2em;
+}
+
+.midrow input {
+	background-color: #CCCCCC;
+}
+
+.midcol input {
+	background-color: #CCCCCC;
+}
+
+.sudoku .f {
+	padding: 0px;
+	height: 45px;
+
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
 
 table.sudoku {
 	background-color: #0099CC;
@@ -114,3 +162,4 @@ td.midrow {
 td.midcol {
 	background-color: #CCCCCC;
 }
+

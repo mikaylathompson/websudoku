@@ -1,27 +1,146 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
-<!-- The HTML 4.01 Transitional DOCTYPE declaration-->
-<!-- above set at the top of the file will set     -->
-<!-- the browser's rendering engine into           -->
-<!-- "Quirks Mode". Replacing this declaration     -->
-<!-- with a "Standards Mode" doctype is supported, -->
-<!-- but may lead to some differences in layout.   -->
+<!DOCTYPE html>
 
+<!DOCTYPE html>
 <html>
-  <head>
-    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
-    <title>Hello App Engine</title>
-  </head>
+<head>
+<link type="text/css" rel="stylesheet" href="style.css" />
+</head>
+<body>
 
-  <body>
-    <h1>Welcome to the sudoku solver!</h1>
-	
-    <table>
-      <tr>
-        <td colspan="2" style="font-weight:bold;">Available Servlets:</td>        
-      </tr>
-      <tr>
-        <td><a href="solve?numbers=530070000600195000098000060800060003400803001700020006060000280000419005000080079&display=Submit">WebSudokuSolver</a></td>
-      </tr>
-    </table>
-  </body>
+<table class=page>
+  <form action="/solve" method="post">
+    <tr>
+      <td>
+        <table class="title">
+          <tr>
+            <td class="S">S</td>
+            <td class="titleText">udoku<br>olver</td>
+          </tr>
+        </table>
+      </td>
+      <td>
+        <table class=sudoku>
+        <tr> 
+        <td class="f"><input type="number" min="0" max="9" name="n0" size="1"></td> 
+        <td class="f"><input type="number" min="0" max="9" name="n1" size="1"></td>
+        <td class="f"><input type="number" min="0" max="9" name="n2" size="1"></td>
+        <td class= "f midcol"><input type="number" min="0" max="9" name="n3" size="1"></td> 
+        <td class= "f midcol"><input type="number" min="0" max="9" name="n4" size="1"></td> 
+        <td class= "f midcol"><input type="number" min="0" max="9" name="n5" size="1"></td> 
+        <td class="f"><input type="number" min="0" max="9" name="n6" size="1"></td> 
+        <td class="f"><input type="number" min="0" max="9" name="n7" size="1"></td>
+        <td class="f"><input type="number" min="0" max="9" name="n8" size="1"></td>
+        </tr> 
+        <tr> 
+        <td class="f"><input type="number" min="0" max="9" name="n9" size="1"></td> 
+        <td class="f"><input type="number" min="0" max="9" name="n10" size="1"></td>
+        <td class="f"><input type="number" min="0" max="9" name="n11" size="1"></td>
+        <td class= "f midcol"><input type="number" min="0" max="9" name="n12" size="1"></td> 
+        <td class= "f midcol"><input type="number" min="0" max="9" name="n13" size="1"></td> 
+        <td class= "f midcol"><input type="number" min="0" max="9" name="n14" size="1"></td> 
+        <td class="f"><input type="number" min="0" max="9" name="n15" size="1"></td> 
+        <td class="f"><input type="number" min="0" max="9" name="n16" size="1"></td>
+        <td class="f"><input type="number" min="0" max="9" name="n17" size="1"></td>
+        </tr> 
+        <tr> 
+        <td class="f"><input type="number" min="0" max="9" name="n18" size="1"></td> 
+        <td class="f"><input type="number" min="0" max="9" name="n19" size="1"></td>
+        <td class="f"><input type="number" min="0" max="9" name="n20" size="1"></td>
+        <td class= "f midcol"><input type="number" min="0" max="9" name="n21" size="1"></td> 
+        <td class= "f midcol"><input type="number" min="0" max="9" name="n22" size="1"></td> 
+        <td class= "f midcol"><input type="number" min="0" max="9" name="n23" size="1"></td> 
+        <td class="f"><input type="number" min="0" max="9" name="n24" size="1"></td> 
+        <td class="f"><input type="number" min="0" max="9" name="n25" size="1"></td>
+        <td class="f"><input type="number" min="0" max="9" name="n26" size="1"></td>
+        </tr> 
+        <tr> 
+        <td class= "f midrow"><input type="number" min="0" max="9" name="n27" size="1"></td> 
+        <td class= "f midrow"><input type="number" min="0" max="9" name="n28" size="1"></td>  
+        <td class= "f midrow"><input type="number" min="0" max="9" name="n29" size="1"></td> 
+        <td class= "f midrow"><input type="number" min="0" max="9" name="n30" size="1"></td> 
+        <td class= "f midrow"><input type="number" min="0" max="9" name="n31" size="1"></td> 
+        <td class= "f midrow"><input type="number" min="0" max="9" name="n32" size="1"></td> 
+        <td class= "f midrow"><input type="number" min="0" max="9" name="n33" size="1"></td> 
+        <td class= "f midrow"><input type="number" min="0" max="9" name="n34" size="1"></td> 
+        <td class= "f midrow"><input type="number" min="0" max="9" name="n35" size="1"></td> 
+        </tr> 
+        <tr> 
+        <td class= "f midrow"><input type="number" min="0" max="9" name="n36" size="1"></td> 
+        <td class= "f midrow"><input type="number" min="0" max="9" name="n37" size="1"></td>  
+        <td class= "f midrow"><input type="number" min="0" max="9" name="n38" size="1"></td> 
+        <td class= "f midrow"><input type="number" min="0" max="9" name="n39" size="1"></td> 
+        <td class= "f midrow"><input type="number" min="0" max="9" name="n40" size="1"></td> 
+        <td class= "f midrow"><input type="number" min="0" max="9" name="n41" size="1"></td> 
+        <td class= "f midrow"><input type="number" min="0" max="9" name="n42" size="1"></td> 
+        <td class= "f midrow"><input type="number" min="0" max="9" name="n43" size="1"></td> 
+        <td class= "f midrow"><input type="number" min="0" max="9" name="n44" size="1"></td> 
+        </tr> 
+        <tr> 
+        <td class= "f midrow"><input type="number" min="0" max="9" name="n45" size="1"></td> 
+        <td class= "f midrow"><input type="number" min="0" max="9" name="n46" size="1"></td>  
+        <td class= "f midrow"><input type="number" min="0" max="9" name="n47" size="1"></td> 
+        <td class= "f midrow"><input type="number" min="0" max="9" name="n48" size="1"></td> 
+        <td class= "f midrow"><input type="number" min="0" max="9" name="n49" size="1"></td> 
+        <td class= "f midrow"><input type="number" min="0" max="9" name="n50" size="1"></td> 
+        <td class= "f midrow"><input type="number" min="0" max="9" name="n51" size="1"></td> 
+        <td class= "f midrow"><input type="number" min="0" max="9" name="n52" size="1"></td> 
+        <td class= "f midrow"><input type="number" min="0" max="9" name="n53" size="1"></td> 
+        </tr> 
+        <tr> 
+        <td class="f"><input type="number" min="0" max="9" name="n54" size="1"></td> 
+        <td class="f"><input type="number" min="0" max="9" name="n55" size="1"></td>
+        <td class="f"><input type="number" min="0" max="9" name="n56" size="1"></td>
+        <td class= "f midcol"><input type="number" min="0" max="9" name="n57" size="1"></td> 
+        <td class= "f midcol"><input type="number" min="0" max="9" name="n58" size="1"></td> 
+        <td class= "f midcol"><input type="number" min="0" max="9" name="n59" size="1"></td> 
+        <td class="f"><input type="number" min="0" max="9" name="n60" size="1"></td> 
+        <td class="f"><input type="number" min="0" max="9" name="n61" size="1"></td>
+        <td class="f"><input type="number" min="0" max="9" name="n62" size="1"></td>
+        </tr> 
+        <tr> 
+        <td class="f"><input type="number" min="0" max="9" name="n63" size="1"></td> 
+        <td class="f"><input type="number" min="0" max="9" name="n64" size="1"></td>
+        <td class="f"><input type="number" min="0" max="9" name="n65" size="1"></td>
+        <td class= "f midcol"><input type="number" min="0" max="9" name="n66" size="1"></td> 
+        <td class= "f midcol"><input type="number" min="0" max="9" name="n67" size="1"></td> 
+        <td class= "f midcol"><input type="number" min="0" max="9" name="n68" size="1"></td> 
+        <td class="f"><input type="number" min="0" max="9" name="n69" size="1"></td> 
+        <td class="f"><input type="number" min="0" max="9" name="n70" size="1"></td>
+        <td class="f"><input type="number" min="0" max="9" name="n71" size="1"></td>
+        </tr> 
+        <tr> 
+        <td class="f"><input type="number" min="0" max="9" name="n72" size="1"></td> 
+        <td class="f"><input type="number" min="0" max="9" name="n73" size="1"></td>
+        <td class="f"><input type="number" min="0" max="9" name="n74" size="1"></td>
+        <td class= "f midcol"><input type="number" min="0" max="9" name="n75" size="1"></td> 
+        <td class= "f midcol"><input type="number" min="0" max="9" name="n76" size="1"></td> 
+        <td class= "f midcol"><input type="number" min="0" max="9" name="n77" size="1"></td> 
+        <td class="f"><input type="number" min="0" max="9" name="n78" size="1"></td> 
+        <td class="f"><input type="number" min="0" max="9" name="n79" size="1"></td>
+        <td class="f"><input type="number" min="0" max="9" name="n80" size="1"></td>
+        </tr> 
+        </table>
+      </td>
+      <td class="again">
+        <p class="instr"> Enter the known<br>numbers into<br>the puzzle.<br> Unknowns can<br>be 0 or left<br>blank.</p>
+        <p class="test">
+          <!-- 530070000600195000098000060800060003400803001700020006060000280000419005000080079 -->
+          Testing numbers:
+        <input type="text" name="numbers" size="6">
+        <br>
+      </p>
+
+        <input class="solve" type="submit" value="Solve"><br><br><br><br>
+      </td>
+    </tr>
+  </form>
+</table>
+
+<div class="footer">
+Mikayla Thompson
+</div>
+
+</body>
 </html>
+
+
